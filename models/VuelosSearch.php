@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Usuarios;
+use app\models\Vuelos;
 
 /**
- * UsuariosSearch represents the model behind the search form about `app\models\Usuarios`.
+ * VuelosSearch represents the model behind the search form about `app\models\Vuelos`.
  */
-class UsuariosSearch extends Usuarios
+class VuelosSearch extends Vuelos
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class UsuariosSearch extends Usuarios
     public function rules()
     {
         return [
-            [['idUser'], 'integer'],
-            [['usuario', 'contrasena'], 'safe'],
+            [['id'], 'integer'],
+            [['Origen', 'Destino', 'Salida', 'Aribo'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class UsuariosSearch extends Usuarios
      */
     public function search($params)
     {
-        $query = Usuarios::find();
+        $query = Vuelos::find();
 
         // add conditions that should always apply here
 
@@ -59,11 +59,13 @@ class UsuariosSearch extends Usuarios
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'idUser' => $this->idUser,
+            'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'usuario', $this->usuario])
-            ->andFilterWhere(['like', 'contrasena', $this->contrasena]);
+        $query->andFilterWhere(['like', 'Origen', $this->Origen])
+            ->andFilterWhere(['like', 'Destino', $this->Destino])
+            ->andFilterWhere(['like', 'Salida', $this->Salida])
+            ->andFilterWhere(['like', 'Aribo', $this->Aribo]);
 
         return $dataProvider;
     }

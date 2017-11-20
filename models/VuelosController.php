@@ -1,18 +1,18 @@
 <?php
 
-namespace app\controllers;
+namespace app\models;
 
 use Yii;
-use app\models\Usuarios;
-use app\models\UsuariosSearch;
+use app\models\Vuelos;
+use app\models\VuelosSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * UsuariosController implements the CRUD actions for Usuarios model.
+ * VuelosController implements the CRUD actions for Vuelos model.
  */
-class UsuariosController extends Controller
+class VuelosController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class UsuariosController extends Controller
     }
 
     /**
-     * Lists all Usuarios models.
+     * Lists all Vuelos models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new UsuariosSearch();
+        $searchModel = new VuelosSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class UsuariosController extends Controller
     }
 
     /**
-     * Displays a single Usuarios model.
+     * Displays a single Vuelos model.
      * @param integer $id
      * @return mixed
      */
@@ -57,16 +57,16 @@ class UsuariosController extends Controller
     }
 
     /**
-     * Creates a new Usuarios model.
+     * Creates a new Vuelos model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Usuarios();
+        $model = new Vuelos();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->idUser]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -75,7 +75,7 @@ class UsuariosController extends Controller
     }
 
     /**
-     * Updates an existing Usuarios model.
+     * Updates an existing Vuelos model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -85,7 +85,7 @@ class UsuariosController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->idUser]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -94,7 +94,7 @@ class UsuariosController extends Controller
     }
 
     /**
-     * Deletes an existing Usuarios model.
+     * Deletes an existing Vuelos model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class UsuariosController extends Controller
     }
 
     /**
-     * Finds the Usuarios model based on its primary key value.
+     * Finds the Vuelos model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Usuarios the loaded model
+     * @return Vuelos the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Usuarios::findOne($id)) !== null) {
+        if (($model = Vuelos::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

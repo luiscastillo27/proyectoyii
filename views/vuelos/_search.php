@@ -4,26 +4,26 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\BannerSearch */
+/* @var $model app\models\VuelosSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="banner-search">
+<div class="vuelos-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id_banner') ?>
+    <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'imagen') ?>
+    <?= $form->field($model, 'Origen') ?>
 
-    <?= $form->field($model, 'descripcion') ?>
+    <?= $form->field($model, 'Destino') ?>
 
-    <?= $form->field($model, 'tipo') ?>
+    <?= $form->field($model, 'Salida') ?>
 
-    <?= $form->field($model, 'estado') ?>
+    <?= $form->field($model, 'Aribo') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
