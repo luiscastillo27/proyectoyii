@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\VuelosSearch */
+/* @var $searchModel app\models\ReservacionesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Vuelos';
+$this->title = 'Reservaciones';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="vuelos-index">
+<div class="reservaciones-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Vuelos', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Reservaciones', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,11 +25,10 @@ $this->title = 'Vuelos';
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'Origen',
-            'Destino',
-            'Salida',
-            'Aribo',
-            'tipo',
+            'idVuelo',
+            'nombre',
+            'telefono',
+            'correo',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

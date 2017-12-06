@@ -12,16 +12,40 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'Origen')->textInput(['maxlength' => true]) ?>
+    <?php $origen = array('Cancún' => 'Cancún', 
+                          'Vallarta' => 'Vallarta',   
+                          'Japon' => 'Japon',    
+                          'Alemania' => 'Alemania',
+                          'Monterrey' => 'Monterrey',
+                          'Guadalajara' => 'Guadalajara',
+                          'Aguascalientes' => 'Aguascalientes',
+                          'USA' => 'USA',
+                          'Francia' => 'Francia',
+                          'México' => 'México' ); ?>
 
-    <?= $form->field($model, 'Destino')->textInput(['maxlength' => true]) ?>
+    <?php $destino = array('Cancún' => 'Cancún', 
+                          'Vallarta' => 'Vallarta',   
+                          'Japon' => 'Japon',    
+                          'Alemania' => 'Alemania',
+                          'Monterrey' => 'Monterrey',
+                          'Guadalajara' => 'Guadalajara',
+                          'Aguascalientes' => 'Aguascalientes',
+                          'USA' => 'USA',
+                          'Francia' => 'Francia',
+                          'México' => 'México' ); ?>
+
+    <?= $form->field($model, 'Origen')->dropDownList([ $origen ]) ?>
+
+    <?= $form->field($model, 'Destino')->dropDownList([ $destino ]) ?>
 
     <?= $form->field($model, 'Salida')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'Aribo')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'tipo')->dropDownList([ 'Redondo' => 'Redondo', 'Sencillo' => 'Sencillo', ]) ?>
+
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Gurdar vuelo' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

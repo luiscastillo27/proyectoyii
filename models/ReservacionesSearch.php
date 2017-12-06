@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Vuelos;
+use app\models\Reservaciones;
 
 /**
- * VuelosSearch represents the model behind the search form about `app\models\Vuelos`.
+ * ReservacionesSearch represents the model behind the search form about `app\models\Reservaciones`.
  */
-class VuelosSearch extends Vuelos
+class ReservacionesSearch extends Reservaciones
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class VuelosSearch extends Vuelos
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['Origen', 'Destino', 'Salida', 'Aribo', 'tipo'], 'safe'],
+            [['id', 'idVuelo'], 'integer'],
+            [['nombre', 'telefono', 'correo'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class VuelosSearch extends Vuelos
      */
     public function search($params)
     {
-        $query = Vuelos::find();
+        $query = Reservaciones::find();
 
         // add conditions that should always apply here
 
@@ -60,13 +60,12 @@ class VuelosSearch extends Vuelos
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'idVuelo' => $this->idVuelo,
         ]);
 
-        $query->andFilterWhere(['like', 'Origen', $this->Origen])
-            ->andFilterWhere(['like', 'Destino', $this->Destino])
-            ->andFilterWhere(['like', 'Salida', $this->Salida])
-            ->andFilterWhere(['like', 'Aribo', $this->Aribo])
-            ->andFilterWhere(['like', 'tipo', $this->tipo]);
+        $query->andFilterWhere(['like', 'nombre', $this->nombre])
+            ->andFilterWhere(['like', 'telefono', $this->telefono])
+            ->andFilterWhere(['like', 'correo', $this->correo]);
 
         return $dataProvider;
     }

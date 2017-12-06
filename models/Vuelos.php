@@ -12,6 +12,7 @@ use Yii;
  * @property string $Destino
  * @property string $Salida
  * @property string $Aribo
+ * @property string $tipo
  */
 class Vuelos extends \yii\db\ActiveRecord
 {
@@ -29,7 +30,9 @@ class Vuelos extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Origen', 'Destino', 'Salida', 'Aribo'], 'string', 'max' => 11],
+            [['tipo'], 'string'],
+            [['Origen', 'Destino'], 'string', 'max' => 127],
+            [['Salida', 'Aribo'], 'string', 'max' => 11],
         ];
     }
 
@@ -44,6 +47,7 @@ class Vuelos extends \yii\db\ActiveRecord
             'Destino' => 'Destino',
             'Salida' => 'Salida',
             'Aribo' => 'Aribo',
+            'tipo' => 'Tipo',
         ];
     }
 }

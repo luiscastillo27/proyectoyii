@@ -1,53 +1,61 @@
-<?php
+<div class="inicio-index">
+    <h2>¡Aprovecha la Venta de Fin de Año!</h2>
+    <h4>No te pierdas las ofertas de vuelos de esta Venta de Fin</h4>
+    <h5>de Año: hasta 18 MSI y tarifas especiales para viajar en</h5>
+    <h6>Navidad y Año Nuevo.</h6>
+</div>
 
-/* @var $this yii\web\View */
-
-$this->title = 'My Yii Application';
-?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+<div class="inicio-content izquierda">
+    <div class="contenedor-img">
+        <img src="../web/assets/img/1.png">
     </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
-
+    <div class="contenedor-body">
+        <h2>¡Venta Navideña!</h2>
+        <p>No dejes ir estos vuelos a México en oferta y descubre increíbles destinos en esta temporada navideña.</p>
+        <a href="" class="btn">CONOCE MÁS</a> 
     </div>
+</div>
+
+<div class="inicio-content derecha">
+    <div class="contenedor-img">
+        <img src="../web/assets/img/2.png">
+    </div>
+    <div class="contenedor-body">
+        <h2>¡Tarifas especiales para volar a la ciudad en Navidad!!</h2>
+        <p>Conoce estas promociones para viajar desde la playa a la ciudad en Navidad.</p>
+        <a class="btn">CONOCE MÁS</a>
+    </div>
+</div>
+
+<div class="inicio-content izquierda">
+    <div class="contenedor-img">
+        <img src="../web/assets/img/3.png">
+    </div>
+    <div class="contenedor-body">
+        <h2>¡Con Aeroméxico y Mundomex vuela más alto!</h2>
+        <p>Aprovecha nuestra promoción y gana la mejor experiencia de tu vida.</p>
+        <a class="btn">CONOCE MÁS</a>
+    </div>
+</div>
+
+<div class="inicio-content derecha">
+    <div class="contenedor-img">
+        <img src="../web/assets/img/4.png">
+    </div>
+    <div class="contenedor-body">
+        <h2>Tarjetas Santander Aeroméxico</h2>
+        <p>Tu Tarjeta Santander Aeroméxico te da una maleta adicional.</p>
+        <a class="btn">CONOCE MÁS</a>
+    </div>  
+</div>
+
+<div class="inicio-content izquierda">
+    <div class="contenedor-img">
+       <img src="../web/assets/img/5.png"> 
+    </div>
+    <div class="contenedor-body">
+        <h2>Tarjetas American Express Aeroméxico</h2>
+        <p>Con las tarjetas American Express Aeroméxico disfruta de increíbles beneficios para que viajes todo el año.</p>
+        <a class="btn">CONOCE MÁS</a>
+    </div> 
 </div>

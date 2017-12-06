@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Vuelos */
+/* @var $model app\models\Reservaciones */
 
 $this->title = $model->id;
-//$this->params['breadcrumbs'][] = ['label' => 'Vuelos', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = ['label' => 'Reservaciones', 'url' => ['index']];
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="vuelos-view">
+<div class="reservaciones-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,11 +29,10 @@ $this->title = $model->id;
         'model' => $model,
         'attributes' => [
             'id',
-            'Origen',
-            'Destino',
-            'Salida',
-            'Aribo',
-            'tipo',
+            'idVuelo',
+            'nombre',
+            'telefono',
+            'correo',
         ],
     ]) ?>
 
