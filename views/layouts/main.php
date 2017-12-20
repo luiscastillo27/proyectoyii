@@ -8,7 +8,9 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use yii\helpers\Url;
 
+$this->title = 'FlyYii';
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -34,27 +36,56 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'inicio', 'url' => ['/site/index']],
-            ['label' => 'Vuelos', 'url' => ['/vuelos']],
-            ['label' => 'Reservaciones', 'url' => ['/reservaciones']],
-            
-            // Yii::$app->user->isGuest ? (
-            //     ['label' => 'Login', 'url' => ['/site/login']]
-            // ) : (
-            //     '<li>'
-            //     . Html::beginForm(['/site/logout'], 'post')
-            //     . Html::submitButton(
-            //         'Logout (' . Yii::$app->user->identity->username . ')',
-            //         ['class' => 'btn btn-link logout']
-            //     )
-            //     . Html::endForm()
-            //     . '</li>'
-            // )
-        ],
-    ]);
+
+    $loginyes = Yii::$app->user->isGuest;
+
+    if($loginyes == 1){
+
+        echo Nav::widget([
+            'options' => ['class' => 'navbar-nav navbar-right'],
+            'items' => [
+                ['label' => 'inicio', 'url' => ['/site/index']],
+                ['label' => 'Vuelos', 'url' => ['/vuelos']],
+                ['label' => 'Reservaciones', 'url' => ['/reservaciones/create']],
+                
+                Yii::$app->user->isGuest ? (
+                    ['label' => 'Login', 'url' => ['/site/login']]
+                ) : (
+                    '<li>'
+                    . Html::beginForm(['/site/logout'], 'post')
+                    . Html::submitButton(
+                        'Logout (' . Yii::$app->user->identity->username . ')',
+                        ['class' => 'btn btn-link logout']
+                    )
+                    . Html::endForm()
+                    . '</li>'
+                )
+            ],
+        ]);
+    } else {
+
+         echo Nav::widget([
+            'options' => ['class' => 'navbar-nav navbar-right'],
+            'items' => [
+                ['label' => 'inicio', 'url' => ['/site/index']],
+                ['label' => 'Vuelos', 'url' => ['/vuelos']],
+                ['label' => 'Reservaciones', 'url' => ['/reservaciones']],
+             Yii::$app->user->isGuest ? (
+                    ['label' => 'Login', 'url' => ['/site/login']]
+                ) : (
+                    '<li>'
+                    . Html::beginForm(['/site/logout'], 'post')
+                    . Html::submitButton(
+                        'Logout (' . Yii::$app->user->identity->username . ')',
+                        ['class' => 'btn btn-link logout']
+                    )
+                    . Html::endForm()
+                    . '</li>'
+                )
+            ],
+        ]);
+
+    }
     NavBar::end();
     ?>
 
@@ -71,9 +102,9 @@ AppAsset::register($this);
         <p class="pull-left">&copy; FlyYii <?= date('Y') ?></p>
 
         <p class="pull-right">© 2017 FlyYii Todos los derechos reservados
-            | <a href="#">Legal</a>
-            | <a href="#">Aviso de privacidad</a>
-            | <a href="#">Más información</a> |
+            | <a href="<?= Url::toRoute('site/informacion-legal')?>">Legal</a>
+            | <a href="<?= Url::toRoute('site/informacion-legal')?>">Aviso de privacidad</a>
+            | <a href="<?= Url::toRoute('site/informacion-legal')?>">Más información</a> |
         </p>
     </div>
 </footer>

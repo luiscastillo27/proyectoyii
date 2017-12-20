@@ -1,0 +1,40 @@
+<?php
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+?>
+
+<h3><?= $msg ?></h3>
+<div class="vuelos-create">
+<h1>Crear cuenta nueva</h1>
+<?php $form = ActiveForm::begin([
+    'method' => 'post',
+ 	'id' => 'formulario',
+ 	'enableClientValidation' => false,
+ 	'enableAjaxValidation' => true,
+]);
+?>
+
+	<div class="form-group">
+	 <?= $form->field($model, "username")->input("text") ?>   
+	</div>
+
+	<div class="form-group">
+	 <?= $form->field($model, "email")->input("email") ?>   
+	</div>
+
+	<div class="form-group">
+	 <?= $form->field($model, "password")->input("password") ?>   
+	</div>
+
+	<div class="form-group">
+	 <?= $form->field($model, "password_repeat")->input("password") ?>   
+	</div>
+
+	<?= Html::submitButton("Crear usuario", ["class" => "btn btn-primary"]) ?>
+</div>
+
+<div class="vuelos-text">
+    Registrate para poder crear tu reservacion.
+</div>
+
+<?php $form->end() ?>

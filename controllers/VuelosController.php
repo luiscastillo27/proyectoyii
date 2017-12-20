@@ -33,14 +33,16 @@ class VuelosController extends Controller
      * Lists all Vuelos models.
      * @return mixed
      */
-    public function actionIndex()
-    {
+    public function actionIndex(){
+        $table = new  Vuelos();
+        $model = $table->find()->all();
         $searchModel = new VuelosSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'model' => $model
         ]);
     }
 

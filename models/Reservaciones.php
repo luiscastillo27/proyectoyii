@@ -40,8 +40,8 @@ class Reservaciones extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'idVuelo' => 'Id Vuelo',
+            'id' => 'id',
+            'idVuelo' => 'Vuelo',
             'nombre' => 'Nombre',
             'telefono' => 'Telefono',
             'correo' => 'Correo',

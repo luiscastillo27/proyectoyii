@@ -5,6 +5,59 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+.site-login  .form-group {
+    display: block;
+    width: 500px;
+}
+.site-login label{
+    color: #fff;
+}
+.site-login{
+    width: 400px;
+    background: #071E45;
+    margin: 0px auto;
+    border-radius: 10px;
+    padding-bottom: 1px;
+}
+.site-login h1{
+    text-align: center;
+    padding: 10px;
+}
+.site-login button{
+    display: table;
+    margin-left: 260px;
+    margin-top: -10px;
+}
+.site-login button:hover{
+    background: #FF0000;
+}
+.site-login .col-lg-1{
+    width: 10px;
+    margin-left: 20px;
+}
+.site-login .col-lg-8{
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.site-login .col-lg-3{
+    width: 300px;
+    margin-left: 50px;
+}
+.site-login{
+    display: #071E45;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 h1{
     color: #fff;
 }
@@ -18,7 +71,6 @@ h1{
 .navbar-nav .active a{
     background: #465CFD !important;
 }
-
 .inicio-index{
     background: #082144;
     padding: 10px;
@@ -47,6 +99,7 @@ h1{
     padding: 20px;
     clear: both;
     float: none;
+    margin-bottom: 5px;
 }
 .izquierda{
     background: #ddd;
@@ -127,18 +180,30 @@ td{
     margin-left: 650px;
     border-radius: 10px;
 }
-
-
-
-
-
-
-
-
-
+.mitad,
+.tress{
+    background: #ddd;
+    display: inline-block;
+    width: 49.83%;
+    margin-bottom: 5px;
+}
+.tress{
+    width: 33.1%;
+}
+.tress .contenedor-img{
+    width: 100%;
+}
 .yii-debug-toolbar__bar{
     display: none;
 }
+.btn.btn-link.logout{
+    padding: 0px;
+    padding: 5px;
+}
+
+
+
+
 .wrap {
     min-height: 100%;
     height: auto;

@@ -14,21 +14,18 @@ use Yii;
  * @property string $Aribo
  * @property string $tipo
  */
-class Vuelos extends \yii\db\ActiveRecord
-{
+class Vuelos extends \yii\db\ActiveRecord{
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName(){
         return 'vuelos';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules(){
         return [
             [['tipo'], 'string'],
             [['Origen', 'Destino'], 'string', 'max' => 127],
@@ -39,10 +36,9 @@ class Vuelos extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels(){
         return [
-            'id' => 'ID',
+            'id' => 'id',
             'Origen' => 'Origen',
             'Destino' => 'Destino',
             'Salida' => 'Salida',

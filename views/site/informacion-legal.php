@@ -1,0 +1,23 @@
+<?php
+use yii\helpers\Url;
+?>
+<div class="inicio-index">
+    <div class="contenedor-img">
+        <img style="border-radius: 100%; width: 150px; height: 150px; margin-top: 10px;" src="../web/assets/img/legal-hero.png">
+    </div>
+    <h2>Reglamentos y Políticas</h2>
+</div>
+
+<div class="inicio-content izquierda min">
+    <div class="contenedor-body">
+        <h2>Términos y condiciones</h2>
+        <h4>Necesitará configurar su navegador de internet para aceptar JavaScript y Cookies para visualizar correctamente este sitio.</h4>
+        <h3>Introducción</h3>
+        <p>Gracias por visitar la página de Aeroméxico en Internet "aeromexico.com" ("El Sitio"). Al tener acceso al Sitio y usarlo, usted conviene en sujetarse al siguiente Convenio sin limitación o calificación, de manera que le pedimos que revise cuidadosamente este Convenio antes de seguir adelante. Si usted no pretende sujetarse legalmente a estos términos y condiciones, no acceda ni use el Sitio. Aeroméxico se reserva el derecho de cambiar este Convenio y hacer cambios a cualquiera de los productos o programas descritos en el Sitio en cualquier momento sin ningún aviso o responsabilidad para él. Cualquiera de dichas revisiones es obligatoria para usted y por lo tanto, periódicamente debe visitar esta pantalla cuando use el Sitio para revisar el Convenio vigente en ese momento, que es obligatorio para usted. Aeroméxico también se reserva el derecho, a su entera discreción, de negarle el acceso al Sitio en cualquier momento. Aeroméxico celebra convenios con terceros ocasionalmente para proporcionar a sus clientes la oportunidad de obtener servicios, productos o precios especiales ofrecidos por el tercero. No se considerará que usted infringe este convenio cuando actúa de acuerdo con los términos y condiciones de tal programa. De la misma manera, los términos y condiciones en este convenio se considerarán como ampliados hasta el grado necesario para permitir a tales terceros que operen dentro de los términos de un convenio por escrito que haya celebrado con Nosotros. Los encabezados en este Convenio se proveen solo para su conveniencia y no se utilizarán para interpretar el Convenio mismo.</p>
+
+        <h3>Avisos de Propiedad Intelectual</h3>
+        <p>A menos que se especifique lo contrario, toda la información, la información de la Cuenta Club Premier, los artículos, los datos, las imágenes, las contraseñas, los Números de Identificación Personal ("PINs"), las pantallas, el texto, los nombres de usuario, las páginas de Internet, y otros materiales (conjuntamente denominados el "Contenido") que aparezcan en el Sitio son propiedad exclusiva de Aerovías de México, S.A. de C.V. o Aeroméxico, o sus subsidiarias y afiliadas:</p>
+        <p>Toda la información, los productos, los servicios y el software contenidos en el Sitio o utilizados en el mismo (el "Contenido") está registrado bajo los derechos de autor (copyright) por Aerovías de México, S.A. de C.V. Todos los derechos reservados. Considere que todo lo que ve o lee en el Sitio está registrado bajo derechos de autor a nombre de Aeroméxico, o se utiliza bajo permiso otorgado por la misma, a menos que se especifique lo contrario. Las marcas registradas, los logotipos, las marcas de servicio y los distintivos comerciales (trade dress) (conjuntamente denominados las "Marcas Registradas") que aparecen en el Sitio son marcas registradas y no registradas de Aerovías de México, S.A. de C.V. u otros. Las imágenes de personas, objetos o lugares que aparecen en el Sitio son la propiedad de Aerovías de México, S.A. de C.V., o se usan con un permiso otorgado por la misma. Aeroméxico es el propietario o usa bajo permiso todo el software contenido en el Sitio, incluyendo, de manera enunciativa más no limitativa, todos los controles de código HTML y Active X. Las leyes de derechos de autor y otras leyes y las estipulaciones de los tratados internacionales protegen este software. La ley expresamente prohíbe que se realicen modificaciones, redistribuciones o reproducciones del software, y tales acciones podrían resultar en la aplicación de severas penalizaciones civiles y criminales. Aeroméxico demandará y apoyará las demandas de quienes infrinjan estas leyes hasta el mayor grado posible. Se le prohíbe copiar, desplegar, distribuir, bajar, otorgar bajo licencia, modificar, publicar, re-enviar, reproducir, volver a utilizar, vender, transmitir, usar para crear un trabajo relacionado, o usar de alguna otra manera el contenido del Sitio para fines públicos o comerciales. Nada de lo contenido en el Sitio se interpretará como que confiere alguna concesión o licencia de ningún derecho de propiedad intelectual, por impedimento, implicación, o de alguna otra manera.</p>
+    </div>
+</div>
+
